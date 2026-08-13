@@ -410,7 +410,7 @@ h1, h2, h3, h4 {
   gap: 20px;
   position: relative;
 }
-.how__step { text-align: center; position: relative; }
+.how__step { text-align: center; position: relative; z-index: 2; }
 .how__step-icon {
   position: relative;
   width: 84px; height: 84px;
@@ -437,10 +437,13 @@ h1, h2, h3, h4 {
 .how__step h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .how__step p { color: var(--ink-soft); font-size: 0.9rem; max-width: 210px; margin: 0 auto; }
 .how__connector {
+  /* Insets computed to land exactly on step-icon centers (84px circles, 4 equal
+     columns, 20px grid gap) rather than an approximate 12.5%, which drifts off
+     the icon centers as the container gets narrower. */
   position: absolute;
   top: 42px;
-  left: 12.5%;
-  right: 12.5%;
+  left: calc((100% - 60px) / 8);
+  right: calc((100% - 60px) / 8);
   height: 0;
   border-top: 2px dashed var(--tan-300);
   z-index: 1;
