@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact & Booking | EADO Paws Dog Walking & Pet Care</title>
+<meta name="description" content="Book a free meet & greet with EADO Paws. Dog walking and pet care in East Downtown Houston (EaDo), TX." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#1f4b38" />
+<link rel="canonical" href="https://www.eadopaws.com/contact.html" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@600;700&family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="EADO Paws Home">
+      <img src="images/logo.png" alt="EADO Paws" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#how-it-works">Get Started</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary">🐾 Book a Walk</a>
+    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile-menu" role="dialog" aria-label="Mobile menu">
+  <button class="nav__mobile-close" aria-label="Close menu">✕</button>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="index.html#how-it-works">Get Started</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="section-label">Get in Touch</span>
+      <h1>Let's Meet Your Pet</h1>
+      <svg class="heading-underline" viewBox="0 0 140 14" fill="none" aria-hidden="true"><path d="M2 7 H58" stroke="#1f4b38" stroke-width="2" stroke-linecap="round"/><path d="M82 7 H138" stroke="#1f4b38" stroke-width="2" stroke-linecap="round"/><path d="M70 3c-2-2-6-2-7 1c-1 3 2 5 7 8c5-3 8-5 7-8c-1-3-5-3-7-1z" fill="#1f4b38"/></svg>
+      <p>Pick a date that works for you and we'll confirm your free meet &amp; greet within a few hours.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container contact__inner">
+
+      <div class="contact__info reveal">
+        <span class="section-label">Contact Details</span>
+        <h2>We'd Love to Meet You</h2>
+        <p style="color:var(--ink-soft); margin-top:8px;">📅 Now booking new EADO clients for <strong id="booking-month"></strong>.</p>
+        <div class="contact__details">
+          <div class="contact__detail">
+            <div class="contact__detail-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5C19 5.4 15.6 2 12 2S5 5.4 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg></div>
+            <div><strong>Service Area</strong><span>EaDo, Midtown, Downtown Houston &amp; the East End</span></div>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5c0-1 1-2 2-2h2l2 5-2 1.5c1 2.3 2.7 4 5 5l1.5-2 5 2v2c0 1-1 2-2 2C10.5 20.5 4 14 4 5z"/></svg></div>
+            <div><strong>Phone</strong><span><a href="tel:+17135550180">(713) 555-0180</a></span></div>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg></div>
+            <div><strong>Email</strong><span><a href="mailto:eadopaws@gmail.com">eadopaws@gmail.com</a></span></div>
+          </div>
+          <div class="contact__detail">
+            <div class="contact__detail-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+            <div><strong>Hours</strong><span>7:00 AM – 8:00 PM, Every Day</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__form reveal">
+        <div class="contact__form-title">Book a Free Meet &amp; Greet 🐾</div>
+        <form id="contact-form" novalidate>
+
+          <div class="contact__form-step">
+            <span class="contact__form-step-label">Step 1 · When works for you?</span>
+            <div class="contact__form-group">
+              <label id="booking-calendar-label">Preferred Date</label>
+              <div class="booking-calendar" role="group" aria-labelledby="booking-calendar-label">
+                <div class="booking-calendar__header">
+                  <button type="button" class="booking-calendar__nav" id="cal-prev" aria-label="Previous month">‹</button>
+                  <span class="booking-calendar__month" id="cal-month-label"></span>
+                  <button type="button" class="booking-calendar__nav" id="cal-next" aria-label="Next month">›</button>
+                </div>
+                <div class="booking-calendar__weekdays">
+                  <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                </div>
+                <div class="booking-calendar__grid" id="cal-grid" aria-live="polite"></div>
+                <div class="booking-calendar__legend">
+                  <span><i class="booking-calendar__dot booking-calendar__dot--available"></i>Available</span>
+                  <span><i class="booking-calendar__dot booking-calendar__dot--full"></i>Full / unavailable</span>
+                </div>
+                <p class="booking-calendar__selected" id="cal-selected-label">Pick a date above</p>
+              </div>
+              <input type="hidden" id="preferred-date" name="preferred-date" required />
+            </div>
+            <div class="contact__form-group">
+              <label for="preferred-time">Preferred Time</label>
+              <select id="preferred-time" name="preferred-time">
+                <option value="">Any time</option>
+                <option value="Morning (7–10am)">Morning (7–10am)</option>
+                <option value="Midday (10am–2pm)">Midday (10am–2pm)</option>
+                <option value="Afternoon (2–5pm)">Afternoon (2–5pm)</option>
+                <option value="Evening (5–8pm)">Evening (5–8pm)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="contact__form-divider" role="presentation"></div>
+
+          <div class="contact__form-step">
+            <span class="contact__form-step-label">Step 2 · Your info</span>
+            <div class="contact__form-row">
+              <div class="contact__form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Jane" required />
+              </div>
+              <div class="contact__form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="contact__form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+            </div>
+            <div class="contact__form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(713) 000-0000" />
+            </div>
+            <div class="contact__form-row">
+              <div class="contact__form-group">
+                <label for="dog-name">Pet's Name</label>
+                <input type="text" id="dog-name" name="dog-name" placeholder="Buddy" />
+              </div>
+              <div class="contact__form-group">
+                <label for="dog-breed">Breed</label>
+                <input type="text" id="dog-breed" name="dog-breed" placeholder="Golden Retriever" />
+              </div>
+            </div>
+            <div class="contact__form-group">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option value="treat-greet-promo">🐾 Treat &amp; Greet Promo — Free First Walk</option>
+                <option value="dog-walking-30">Dog Walking — 30 min ($28)</option>
+                <option value="dog-walking-60">Dog Walking — 60 min ($45)</option>
+                <option value="drop-in-visit">Drop-In Visit ($25)</option>
+                <option value="pet-sitting">Pet Sitting ($45)</option>
+                <option value="puppy-care">Puppy Care ($22)</option>
+                <option value="cat-care">Cat Care ($20)</option>
+                <option value="multiple">Multiple Services</option>
+              </select>
+            </div>
+            <div class="contact__form-group">
+              <label for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" placeholder="Tell us about your pet, schedule, or any special needs..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;font-size:1rem;">
+            Send Message 🐾
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo.png" alt="EADO Paws" class="nav__logo-img nav__logo-img--footer" />
+        </a>
+        <p>Happy walks. Happy pets.<br>Proudly serving the EADO community.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="mailto:eadopaws@gmail.com" aria-label="Email">✉️</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#how-it-works">Get Started</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul class="footer__links">
+          <li><a href="services.html">Dog Walking</a></li>
+          <li><a href="services.html">Pet Sitting</a></li>
+          <li><a href="services.html">Drop-In Visits</a></li>
+          <li><a href="services.html">Puppy Care</a></li>
+          <li><a href="services.html">Cat Care</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact Us</h4>
+        <div class="footer__contact-item">✉️&nbsp; <a href="mailto:eadopaws@gmail.com">eadopaws@gmail.com</a></div>
+        <div class="footer__contact-item">📞&nbsp; <a href="tel:+17135550180">(713) 555-0180</a></div>
+        <div class="footer__contact-item">📍&nbsp; Houston, TX (EADO)</div>
+      </div>
+    </div>
+    <div class="footer__bottom">© <span class="js-footer-year"></span> EADO Paws. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
