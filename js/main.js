@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
       submitBtn.textContent = 'Send Message 🐾';
       submitBtn.disabled = false;
-      showFormMessage(form, 'Could not connect to the server. Please email us at eadopaws@gmail.com and we\'ll get right back to you!', 'error');
+      showFormMessage(form, 'Could not connect to the server. Please email us at pets@eadopaws.com and we\'ll get right back to you!', 'error');
       console.error('Form error:', err);
     }
   });

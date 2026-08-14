@@ -290,12 +290,12 @@ async function sendCustomerConfirmation({ firstName, email, dogName, service }) 
         </p>
         ${serviceLine}
         <p style="color: #5a4940; line-height: 1.7;">
-          In the meantime, if you have any urgent questions, feel free to email us at <a href="mailto:eadopaws@gmail.com" style="color:#C4591A;">eadopaws@gmail.com</a>.
+          In the meantime, if you have any urgent questions, feel free to email us at <a href="mailto:pets@eadopaws.com" style="color:#C4591A;">pets@eadopaws.com</a>.
         </p>
         <p style="color: #5a4940; margin-top: 28px;">Talk soon,<br/><strong>The EaDo Paws Team 🐾</strong></p>
       </div>
       <div style="background: #DDD0C0; padding: 16px; text-align: center; font-size: 0.8rem; color: #8C7B72;">
-        EaDo Paws · East Downtown Houston, TX · <a href="mailto:eadopaws@gmail.com" style="color:#8C7B72;">eadopaws@gmail.com</a>
+        EaDo Paws · East Downtown Houston, TX · <a href="mailto:pets@eadopaws.com" style="color:#8C7B72;">pets@eadopaws.com</a>
       </div>
     </div>
   `;
