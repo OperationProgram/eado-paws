@@ -1,7 +1,5 @@
 // EADO Paws V2 — Main JavaScript
 
-const API_URL = 'https://api.eadopaws.com';
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // === TREAT & GREET PROMO (from flyer QR code: ?promo=treat-greet) ===
@@ -75,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     try {
-      const response = await fetch(`${API_URL}/api/contact`, {
+      const response = await fetch(`/api/contact.php`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -162,7 +160,7 @@ function initBookingCalendar() {
 
   async function fetchAvailability(start, end) {
     try {
-      const res = await fetch(`${API_URL}/api/availability?start=${start}&end=${end}`);
+      const res = await fetch(`/api/availability.php?start=${start}&end=${end}`);
       const data = await res.json();
       return data.success ? data.availability : {};
     } catch (err) {

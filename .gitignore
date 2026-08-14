@@ -2,3 +2,6 @@ backend/node_modules/
 backend/.env
 backend/data/
 *.db
+
+api/config.php
+*.sqlite
