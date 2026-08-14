@@ -23,11 +23,15 @@ app.use(cors({
 }));
 
 // === EMAIL TRANSPORTER ===
+// Hostinger SMTP (or any SMTP host) — set SMTP_HOST/SMTP_PORT in .env.
+// Falls back to Gmail's SMTP if SMTP_HOST isn't set, for local dev.
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: process.env.SMTP_HOST || 'smtp.gmail.com',
+  port: Number(process.env.SMTP_PORT) || 465,
+  secure: true, // true for port 465, false for port 587
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, // Gmail App Password (not your real password)
+    pass: process.env.EMAIL_PASS,
   },
 });
 
