@@ -1,7 +1,6 @@
 // EADO Paws V2 — Main JavaScript
 
-// === CHANGE THIS to your deployed backend URL before going live (currently local-dev only) ===
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://api.eadopaws.com';
 
 document.addEventListener('DOMContentLoaded', () => {
 
