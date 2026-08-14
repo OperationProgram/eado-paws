@@ -109,6 +109,11 @@ app.post('/api/contact', async (req, res) => {
     // --- 3. Send confirmation email to the customer ---
     await sendCustomerConfirmation({ firstName, email, dogName, service });
 
+    // --- 4. Text alert (best-effort — never fails the booking) ---
+    sendTextAlert({ firstName, lastName, dogName, preferredDate }).catch((err) => {
+      console.error('Text alert failed (booking still succeeded):', err.message);
+    });
+
     return res.status(200).json({
       success: true,
       message: `Thanks ${firstName}! We'll be in touch within a few hours. 🐾`,
@@ -305,6 +310,22 @@ async function sendCustomerConfirmation({ firstName, email, dogName, service }) 
     to: email,
     subject: `🐾 We got your request, ${firstName}! Talk soon.`,
     html,
+  });
+}
+
+async function sendTextAlert({ firstName, lastName, dogName, preferredDate }) {
+  if (!process.env.SMS_GATEWAY) return; // disabled — no gateway address configured
+
+  // Carrier gateways render plain text only and often truncate around 140-160
+  // chars, so keep this short — no HTML, no subject clutter.
+  const dateLine = preferredDate ? ` for ${preferredDate}` : '';
+  const text = `EADO Paws: New booking from ${firstName} ${lastName}${dogName ? ` (${dogName})` : ''}${dateLine}. Check email for details.`;
+
+  await transporter.sendMail({
+    from: `"EADO Paws" <${process.env.EMAIL_USER}>`,
+    to: process.env.SMS_GATEWAY,
+    subject: '',
+    text,
   });
 }
 
