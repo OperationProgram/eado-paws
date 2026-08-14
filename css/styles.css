@@ -180,7 +180,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 .nav__links { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; gap: 30px; }
-.nav__inner > .btn { flex: 0 0 auto; }
+.nav__inner > .btn { flex: 0 0 auto; padding-left: 34px; padding-right: 22px; }
 .nav__links a {
   font-weight: 600;
   font-size: 0.94rem;
