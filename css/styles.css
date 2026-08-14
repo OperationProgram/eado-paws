@@ -723,6 +723,38 @@ h1, h2, h3, h4 {
   .cta-band { padding: 44px 30px; }
 }
 @media (max-width: 600px) {
+  /* Hero becomes a full-bleed photo background: image fills the section,
+     a left-to-right fade reveals the cream page background under the text,
+     and the photo itself stays visible on the right. Reuses the same
+     mask-based fade technique as the desktop hero. */
+  .hero__inner { position: relative; min-height: 680px; padding-bottom: 36px; }
+  .hero__content-col {
+    order: initial;
+    position: relative;
+    z-index: 1;
+    padding: 40px 24px 0;
+  }
+  .hero__content { max-width: 68%; }
+  .hero__image-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    z-index: 0;
+  }
+  .hero__image-frame { position: absolute; inset: 0; }
+  .hero__image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
+    border-radius: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 50%, rgba(0,0,0,0.65) 70%, #000 92%);
+    mask-image: linear-gradient(90deg, transparent 0%, transparent 50%, rgba(0,0,0,0.65) 70%, #000 92%);
+    filter: none;
+  }
   .features__grid { grid-template-columns: 1fr; }
   .how__grid { grid-template-columns: 1fr; }
   .pricing__grid { grid-template-columns: 1fr; }
